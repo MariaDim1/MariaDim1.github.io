@@ -1,0 +1,377 @@
+:root{
+    --text-color: #2B2E2B;
+    --link-color: #257325;
+    --background-color: #E6FCE8;
+    --header-color: #BDF0BD;
+    --backtotop-color: #849C91;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins' , sans-serif;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px; 
+    height: 80px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--header-color);
+}
+
+nav .left a {
+    color:  var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right {
+    display: flex;
+    gap: 15px;
+}
+
+nav .right a {
+    color: var(--text-color);
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 2px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+
+
+/* SECTION 1: Introduction */
+.Introduction-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+
+.Introduction-section .text {
+    flex: 5;
+}
+
+.Introduction-section .text h2 {
+    font-size: 45px;
+}
+
+.Introduction-section .text .links {
+    margin-top: 25px;
+}
+
+.Introduction-section .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+
+.Introduction-section .text .links a:hover {
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.Introduction-section .headshot {
+    flex: 2;   
+    display: flex;
+    justify-content: right;
+}
+
+.Introduction-section .headshot img {
+    width: 350px;
+    border-radius: 50%;
+
+}
+
+/* SECTION 2: Skills */
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px; 
+}
+
+#skills {
+    scroll-margin-top: 100px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #609960;
+    border-radius: 5px;
+}
+
+.skills-section .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+    font-size: 18px;
+}
+
+/* SECTION 5: Contact */
+.contact-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+#contact {
+    scroll-margin-top: 100px;
+}
+
+.contact-section h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.contact-text {
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1.5px solid #609960;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+}
+
+.contact-form button:hover {
+    opacity: 0.85;
+}
+
+/* SECTION 6: Footer */
+.footer {
+    background-color: #dff5e2;
+    padding: 50px 50px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-col a {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--link-color);
+    font-size: 14px;
+}
+
+.footer-col a i {
+    margin-right: 6px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: var(--backtotop-color);
+    color: var(--background-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    font-size: 18px;
+    
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 0.8;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    transform: translateΥ(-3px);
+}
+
+
+
+@media (max-width: 850px) {
+    /* SECTION 1: Introduction */
+    .Introduction-section .text h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px) {
+    /* SECTION 1: Introduction */
+    .Introduction-section {
+        flex-direction: column-reverse;
+    }
+
+    .Introduction-section .headshot img{
+        width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Navigation Bar*/
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .right a {
+        font-size: 22px;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+    nav .right a span {
+        display: none;
+    }
+
+    /* SECTION 1: Introduction */
+    .Introduction-section {
+        padding: 0 20px;
+    }
+
+    .Introduction-section .text h2 {
+        font-size: 30px;
+    }
+    
+    /* SECTION 2: Skills */
+    .skills-section {
+        padding: 0 20px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size: 16px;
+    }
+
+    /* SECTION 6: Footer */
+    .footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+}
